@@ -1,3 +1,21 @@
+= Fork to support MongoMapper
+
+  This is meant to be the baisis of a Mongo Mapper persistence model 
+
+Changes: 
+  1. copied AR persistence model to MongoMapper persistence model. Currently they are identical, less the rename.
+
+  2. Added a new hook for the MM persistence model
+
+
+
+Todo:
+
+  1. Write test to verify that there is a 1 to 1 functional relation between  AR and  MM   with respect to the functions required.
+  2. Fix things that aren't fully supported
+
+
+
 = AASM - Ruby state machines
 
 This package contains AASM, a library for adding finite state machines to Ruby classes.

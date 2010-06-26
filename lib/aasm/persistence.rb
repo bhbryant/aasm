@@ -10,5 +10,10 @@ module AASM::Persistence
       require File.join(File.dirname(__FILE__), 'persistence', 'active_record_persistence')
       base.send(:include, AASM::Persistence::ActiveRecordPersistence)
     end
+    
+    if hierarchy.include?("MongoMapper::Document") || hierarchy.include?("MongoMapper::EmbeddedDocument")
+      require File.join(File.dirname(__FILE__), 'persistence', 'mongo_mapper_persistence')
+      base.send(:include, AASM::Persistence::MongoMapperdPersistence)
+    end
   end
 end
